@@ -49,21 +49,21 @@ public class PaymentController
         }
     }
 
-  /*  @GetMapping(value = "/payment/discovery")
-    public Object discovery()
-    {
-        List<String> services = discoveryClient.getServices();
-        for (String element : services) {
-            log.info("*****element: "+element);
-        }
-
-        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
-        for (ServiceInstance instance : instances) {
-            log.info(instance.getServiceId()+"\t"+instance.getHost()+"\t"+instance.getPort()+"\t"+instance.getUri());
-        }
-
-        return this.discoveryClient;
-    }
+//  @GetMapping(value = "/payment/discovery")
+//    public Object discovery()
+//    {
+//        List<String> services = discoveryClient.getServices();
+//        for (String element : services) {
+//            log.info("*****element: "+element);
+//        }
+//
+//        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
+//        for (ServiceInstance instance : instances) {
+//            log.info(instance.getServiceId()+"\t"+instance.getHost()+"\t"+instance.getPort()+"\t"+instance.getUri());
+//        }
+//
+//        return this.discoveryClient;
+//    }
 
     @GetMapping(value = "/payment/lb")
     public String getPaymentLB()
@@ -71,7 +71,7 @@ public class PaymentController
         return serverPort;
     }
 
-    @GetMapping(value = "/payment/feign/timeout")
+    /*  @GetMapping(value = "/payment/feign/timeout")
     public String paymentFeignTimeout()
     {
         // 业务逻辑处理正确，但是需要耗费3秒钟
