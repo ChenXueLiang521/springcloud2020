@@ -1,0 +1,28 @@
+server:
+  port: 2002
+
+spring:
+  application:
+    name: seata-storage-service
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: fsp_tx_group
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://rm-2zehy4iye640j70e21o.mysql.rds.aliyuncs.com:3306/clouddb01?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: xueliangtest
+    password: xueliangtest
+
+logging:
+  level:
+    io:
+      seata: info
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+
